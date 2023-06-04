@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App CD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <div class="startQuiz_btn"><button>Старт</button></div>
+
+    <div class="infoQuiz">
+        <div class="infoTitle"><span>Деякі правила цієї Вікторини!</span></div>
+        <div class="infoList">
+            <div class="info">1. У вас буде тільки 15 секунд на кожне запитання.</div>
+            <div class="info">2. Вибравши відповідь, її не можна буде скасувати.</div>
+            <div class="info">3. Ви не можете вибрати жодну опцію після закінчення часу.</div>
+            <div class="info">4. Ви не можете вийти з вікторини під час гри.</div>
+            <div class="info">5. Ви отримаєте бали за правильні відповіді.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Вийти</button>
+            <button class="restart">Продовжити</button>
+        </div>
+    </div>
+
+    <div class="mainQuiz">
+        <header>
+            <div class="title">Вiкторина</div>
+            <div class="timer">
+                <div class="timeLeft">Залишилося часу</div>
+                <div class="timerSec">15</div>
+            </div>
+            <div class="timeLine"></div>
+        </header>
+        <section>
+            <div class="textQue">
+            </div>
+            <div class="listOptionsQuiz">
+            </div>
+        </section>
+
+        <footer>
+            <div class="totalQue">
+            </div>
+            <button class="next">Наступне запитання</button>
+        </footer>
+    </div>
+
+    <div class="resultQuiz">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="completeText">Ви завершили вікторину!</div>
+        <div class="scoreText">
+        </div>
+        <div class="buttons">
+            <button class="restart">Повторити</button>
+            <button class="quit">Вийти</button>
+        </div>
+    </div>
+
+    <script src="js/questions.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
