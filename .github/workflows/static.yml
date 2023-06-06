@@ -1,9 +1,8 @@
-name: Continuous Deployment for GitHub Pages
+name: Deploy static content to Pages
 
 on:
   push:
-    branches:
-      - master
+    branches: ["master"]
 
   workflow_dispatch:
 
@@ -25,18 +24,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          node-version: "16"
-      - name: Install Dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: gh-pages
-          folder: ./dist
-          cleanup: false
+        uses: actions/deploy-pages@v2
